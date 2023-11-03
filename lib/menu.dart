@@ -1,0 +1,269 @@
+import 'package:flutter/material.dart';
+
+class Menu extends StatefulWidget {
+  const Menu({super.key});
+
+  @override
+  State<Menu> createState() => _MenuState();
+}
+
+class _MenuState extends State<Menu> {
+  String titulo = 'Roles';
+  var contenido = Card(
+    elevation: 10,
+    child: Column(
+      children: [
+        ListTile(
+          leading:
+              const Icon(Icons.person, color: Color.fromARGB(255, 100, 0, 0)),
+          title: const Text('Admin',
+              style: TextStyle(color: Color.fromARGB(255, 100, 0, 0))),
+          // subtitle: const Text('Jefe1'),
+          onTap: () {},
+        ),
+        ListTile(
+          leading:
+              const Icon(Icons.person, color: Color.fromARGB(255, 0, 0, 100)),
+          title: const Text('Barbero',
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 100))),
+          // subtitle: const Text('Jefe1'),
+          onTap: () {},
+        ),
+        ListTile(
+          leading:
+              const Icon(Icons.person, color: Color.fromARGB(255, 0, 0, 0)),
+          title: const Text('Cliente',
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+          // subtitle: const Text('Jefe1'),
+          onTap: () {},
+        ),
+        // Padding(
+        //   padding:
+        //       const EdgeInsets.only(left: 100, right: 100, top: 10, bottom: 10),
+        //   child: Image.asset(
+        //     'imagenes/lycoris.jpg', // Reemplaza con la URL de tu imagen
+        //     fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+        //   ),
+        // ),
+      ],
+    ),
+  );
+  var imag = Padding(
+    padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+    child: Image.asset(
+      'imagenes/bar2.png', // Reemplaza con la URL de tu imagen
+      fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+    ),
+  );
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color.fromARGB(255, 255, 230, 230),
+        appBar: AppBar(
+          title: const Text('The Warriors Barber Shop'),
+          backgroundColor: const Color.fromARGB(255, 100, 0, 0),
+        ),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                  titulo,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Image.asset('imagenes/bar1'),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: contenido,
+            ),
+          ],
+        ),
+        drawer: Drawer(
+            child: ListView(
+          padding: const EdgeInsets.all(0.0),
+          children: [
+            const SizedBox(
+              height: 64,
+              child: DrawerHeader(
+                decoration:
+                    BoxDecoration(color: Color.fromARGB(255, 100, 0, 0)),
+                child: Center(
+                  child: Text(
+                    'Menú',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings,
+                  color: Color.fromARGB(255, 100, 0, 0)),
+              title: const Text(
+                'Configuración',
+                style: TextStyle(fontSize: 15),
+              ),
+              onTap: () {
+                titulo = 'Roles';
+                contenido = Card(
+                  elevation: 10,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 100, 0, 0)),
+                        title: const Text('Admin',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 100, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 100)),
+                        title: const Text('Barbero',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                );
+                imag = Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10, right: 10, top: 10, bottom: 10),
+                  child: Image.asset(
+                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
+                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                  ),
+                );
+
+                Navigator.pop(context); //Cierra la barra de navegación
+                setState(() {});
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.people_alt,
+                  color: Color.fromARGB(255, 100, 0, 0)),
+              title: const Text(
+                'Usuarios',
+                style: TextStyle(fontSize: 15),
+              ),
+              onTap: () {
+                titulo = 'Usuarios';
+                contenido = Card(
+                  elevation: 10,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 100, 0, 0)),
+                        title: const Text('Usuario de admin',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 100, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 100)),
+                        title: const Text('Usuario de barbero',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                );
+                imag = Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10, right: 10, top: 10, bottom: 10),
+                  child: Image.asset(
+                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
+                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                  ),
+                );
+
+                Navigator.pop(context); //Cierra la barra de navegación
+                setState(() {});
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.people_alt,
+                  color: Color.fromARGB(255, 100, 0, 0)),
+              title: const Text(
+                'Usuarios',
+                style: TextStyle(fontSize: 15),
+              ),
+              onTap: () {
+                titulo = 'Usuarios';
+                contenido = Card(
+                  elevation: 10,
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 100, 0, 0)),
+                        title: const Text('Usuario de admin',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 100, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 100)),
+                        title: const Text('Usuario de barbero',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                );
+                imag = Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10, right: 10, top: 10, bottom: 10),
+                  child: Image.asset(
+                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
+                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                  ),
+                );
+
+                Navigator.pop(context); //Cierra la barra de navegación
+                setState(() {});
+              },
+            )
+          ],
+        )));
+  }
+}

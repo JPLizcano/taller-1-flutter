@@ -51,8 +51,9 @@ class _MenuState extends State<Menu> {
   var imag = Padding(
     padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
     child: Image.asset(
-      'imagenes/bar2.png', // Reemplaza con la URL de tu imagen
-      fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+      'imagenes/bar2.png',
+      width: 300,
+      fit: BoxFit.cover,
     ),
   );
   @override
@@ -98,9 +99,7 @@ class _MenuState extends State<Menu> {
                 child: Center(
                   child: Text(
                     'The Warrior Barber Shop',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
@@ -149,12 +148,13 @@ class _MenuState extends State<Menu> {
                   padding: const EdgeInsets.only(
                       left: 10, right: 10, top: 10, bottom: 10),
                   child: Image.asset(
-                    'imagenes/bar2.png', // Reemplaza con la URL de tu imagen
-                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                    'imagenes/bar2.png',
+                    width: 300,
+                    fit: BoxFit.cover,
                   ),
                 );
 
-                Navigator.pop(context); //Cierra la barra de navegación
+                Navigator.pop(context);
                 setState(() {});
               },
             ),
@@ -282,12 +282,13 @@ class _MenuState extends State<Menu> {
                   padding: const EdgeInsets.only(
                       left: 10, right: 10, top: 10, bottom: 10),
                   child: Image.asset(
-                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
-                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                    'imagenes/bar1.png',
+                    width: 500,
+                    fit: BoxFit.cover,
                   ),
                 );
 
-                Navigator.pop(context); //Cierra la barra de navegación
+                Navigator.pop(context);
                 setState(() {});
               },
             ),
@@ -295,11 +296,11 @@ class _MenuState extends State<Menu> {
               leading: const Icon(Icons.people_alt,
                   color: Color.fromARGB(255, 100, 0, 0)),
               title: const Text(
-                'Usuarios',
+                'Insumos',
                 style: TextStyle(fontSize: 15),
               ),
               onTap: () {
-                titulo = 'Usuarios';
+                titulo = 'Insumos';
                 contenido = Card(
                   elevation: 10,
                   child: Column(
@@ -335,12 +336,13 @@ class _MenuState extends State<Menu> {
                   padding: const EdgeInsets.only(
                       left: 10, right: 10, top: 10, bottom: 10),
                   child: Image.asset(
-                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
-                    fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
+                    'imagenes/insumos.png',
+                    width: 300,
+                    fit: BoxFit.cover,
                   ),
                 );
 
-                Navigator.pop(context); //Cierra la barra de navegación
+                Navigator.pop(context);
                 setState(() {});
               },
             )

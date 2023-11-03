@@ -63,26 +63,28 @@ class _MenuState extends State<Menu> {
           title: const Text('The Warriors Barber Shop'),
           backgroundColor: const Color.fromARGB(255, 100, 0, 0),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: Text(
-                  titulo,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    titulo,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Image.asset('imagenes/bar1'),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: contenido,
-            ),
-          ],
+              imag,
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: contenido,
+              ),
+            ],
+          ),
         ),
         drawer: Drawer(
             child: ListView(
@@ -95,11 +97,10 @@ class _MenuState extends State<Menu> {
                     BoxDecoration(color: Color.fromARGB(255, 100, 0, 0)),
                 child: Center(
                   child: Text(
-                    'Menú',
+                    'The Warrior Barber Shop',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                        fontSize: 20),
                   ),
                 ),
               ),
@@ -148,7 +149,7 @@ class _MenuState extends State<Menu> {
                   padding: const EdgeInsets.only(
                       left: 10, right: 10, top: 10, bottom: 10),
                   child: Image.asset(
-                    'imagenes/bar1.png', // Reemplaza con la URL de tu imagen
+                    'imagenes/bar2.png', // Reemplaza con la URL de tu imagen
                     fit: BoxFit.cover, // Ajusta la imagen al tamaño del Card
                   ),
                 );
@@ -184,6 +185,86 @@ class _MenuState extends State<Menu> {
                         title: const Text('Usuario de barbero',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 100)),
+                        title: const Text('Usuario de barbero',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 100)),
+                        title: const Text('Usuario de barbero',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 0, 0, 100))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.person,
+                            color: Color.fromARGB(255, 0, 0, 0)),
+                        title: const Text('Usuario de cliente',
+                            style:
+                                TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
                         onTap: () {},
                       ),
                       ListTile(
